@@ -1,19 +1,13 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: YOUR_GITHUB_USERNAME/Portfolio  # UPDATE THIS with your GitHub username
   branch: main
-  commit_messages:
-    create: 'Create {{collection}} "{{slug}}"'
-    update: 'Update {{collection}} "{{slug}}"'
-    delete: 'Delete {{collection}} "{{slug}}"'
-    uploadMedia: 'Upload "{{path}}"'
-    deleteMedia: 'Delete "{{path}}"'
+  base_url: https://your-site.vercel.app  # UPDATE THIS with your Vercel URL
+  auth_endpoint: /api/auth
 
 # Where uploaded images are stored
 media_folder: "images/blog"
 public_folder: "/images/blog"
-
-# Local backend for development (comment out for production)
-# local_backend: true
 
 collections:
   - name: "blog"

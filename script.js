@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
         return date.toLocaleDateString('en-US', options);
     }
 
-    // Load blog posts from Netlify function or fallback to static data
+    // Load blog posts from Vercel API or fallback to static data
     async function loadBlogPosts() {
         try {
-            const response = await fetch('/.netlify/functions/get-posts');
+            const response = await fetch('/api/posts');
             if (!response.ok) throw new Error('Failed to fetch posts');
             blogPosts = await response.json();
             return blogPosts;

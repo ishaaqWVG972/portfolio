@@ -1,21 +1,14 @@
-const fs = require('fs');
-const path = require('path');
-const matter = require('gray-matter');
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 
-exports.handler = async () => {
+export default function handler(req, res) {
   try {
-    const postsDir = path.join(__dirname, '../../content/blog');
+    const postsDir = path.join(process.cwd(), 'content/blog');
 
     // Check if directory exists
     if (!fs.existsSync(postsDir)) {
-      return {
-        statusCode: 200,
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*'
-        },
-        body: JSON.stringify([])
-      };
+      return res.status(200).json([]);
     }
 
     const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'));
@@ -38,20 +31,9 @@ exports.handler = async () => {
     // Sort by date descending (newest first)
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    return {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify(posts)
-    };
+    res.status(200).json(posts);
   } catch (error) {
     console.error('Error loading posts:', error);
-    return {
-      statusCode: 500,
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ error: 'Failed to load posts' })
-    };
+    res.status(500).json({ error: 'Failed to load posts' });
   }
-};
+}

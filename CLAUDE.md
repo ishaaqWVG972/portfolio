@@ -305,13 +305,51 @@ body::before {
    - Date: "November 2025"
    - Excerpt: "My journey transitioning from technical security work to human-centered design thinking..."
 
+## Hosting & Blog CMS
+
+### Hosting: Vercel
+- Site is hosted on Vercel (vercel.com)
+- Automatic deploys on push to main branch
+- Serverless functions in `/api` folder
+
+### Blog Management: Decap CMS
+- Admin interface at `/admin`
+- Uses GitHub OAuth for authentication (only repo owner can access)
+- Blog posts stored as Markdown files in `content/blog/`
+- Posts are fetched via `/api/posts` serverless function
+
+### Adding a New Blog Post
+1. Go to `your-site.vercel.app/admin`
+2. Log in with GitHub
+3. Click "New Blog Post"
+4. Fill in title, date, excerpt, and body (Markdown)
+5. Click "Publish" - this creates a commit to your repo
+6. Vercel auto-deploys the changes
+
+### Blog Post Format (Markdown with Frontmatter)
+```yaml
+---
+title: "Post Title"
+date: 2026-01-15
+excerpt: "Short description for the blog list..."
+---
+
+Full post content in Markdown here...
+```
+
+### Environment Variables (Vercel Dashboard)
+- `OAUTH_GITHUB_CLIENT_ID` - GitHub OAuth app client ID
+- `OAUTH_GITHUB_CLIENT_SECRET` - GitHub OAuth app secret
+
 ## Implementation Notes
 
 ### File Structure
-- Single HTML file with embedded CSS and JavaScript
-- All styling in `<style>` tag
-- All functionality in `<script>` tag before `</body>`
-- Clean, commented code structure
+- `index.html` - Main HTML structure
+- `styles.css` - All CSS styling
+- `script.js` - JavaScript functionality
+- `api/` - Vercel serverless functions
+- `admin/` - Decap CMS admin interface
+- `content/blog/` - Markdown blog posts
 
 ### Browser Compatibility
 - Modern browsers (Chrome, Firefox, Safari, Edge)
