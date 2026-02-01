@@ -13,6 +13,15 @@
       "headers": [
         { "key": "X-Robots-Tag", "value": "noindex" }
       ]
+    },
+    {
+      "source": "/admin/config.yml",
+      "headers": [
+        { "key": "Content-Type", "value": "text/yaml" }
+      ]
     }
+  ],
+  "rewrites": [
+    { "source": "/admin/config.yml", "destination": "/admin/config.yml" }
   ]
 }

@@ -1,9 +1,8 @@
 backend:
   name: github
   repo: ishaaqWVG972/portfolio
- # UPDATE THIS with your GitHub username
   branch: main
-  base_url: https://portfolio-nine-iota-tsi8y05i0f.vercel.app  # UPDATE THIS with your Vercel URL
+  base_url: https://portfolio-nine-iota-tsi8y05i0f.vercel.app
   auth_endpoint: /api/auth
 
 # Where uploaded images are stored
