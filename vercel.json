@@ -15,10 +15,8 @@
       ]
     }
   ],
-  "rewrites": [
-    {
-      "source": "/admin/config.yml",
-      "destination": "/api/admin/config.yml"
-    }
+   "rewrites": [
+    { "source": "/admin/:path*", "destination": "/admin/:path*" },
+    { "source": "/images/:path*", "destination": "/images/:path*" }
   ]
 }
