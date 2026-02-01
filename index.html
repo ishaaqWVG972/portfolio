@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ishaaq's Portfolio - UX Designer passionate about human-centered design">
+    <title>Ishaaq | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Netlify Identity Widget for CMS authentication -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="nav-left">
+            <div class="online-beacon">
+                <span class="beacon-dot"></span>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="nav-link active" data-view="home">Home</a>
+            <a href="#" class="nav-link" data-view="projects">Projects</a>
+        </div>
+        <div class="nav-right"></div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home View -->
+        <section class="view active" id="home-view">
+            <div class="dashboard-grid">
+                <!-- Contact Tile -->
+                <div class="tile tile-contact" tabindex="0">
+                    <h3 class="tile-title">Get in Touch</h3>
+                    <p class="tile-description">Let's connect and build something amazing</p>
+                    <div class="contact-links">
+                        <a href="mailto:hello@ishaaq.com" class="contact-link">Email</a>
+                        <a href="https://linkedin.com" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="https://github.com" class="contact-link" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Recent Project Tile -->
+                <div class="tile tile-recent" tabindex="0" data-project="latest">
+                    <h3 class="tile-title">Latest Work</h3>
+                    <p class="tile-description">Check out my most recent project</p>
+                </div>
+
+                <!-- Blog Tile (Large) -->
+                <div class="tile tile-blog" tabindex="0" id="blog-tile">
+                    <h2 class="tile-title-large">Thoughts & Ideas</h2>
+                    <p class="tile-description">Insights on design, technology, and creativity</p>
+                    <span class="tile-hint">Click to read</span>
+                </div>
+
+                <!-- About Me Tile -->
+                <div class="tile tile-about" tabindex="0">
+                    <h3 class="tile-title">About Me</h3>
+                    <p class="tile-description">UX designer passionate about human-centered design</p>
+                </div>
+
+                <!-- Game Placeholder Tile -->
+                <div class="tile tile-game" tabindex="0">
+                    <h3 class="tile-title">Mini Game</h3>
+                    <p class="tile-description">Coming soon - interactive experience</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects View -->
+        <section class="view" id="projects-view">
+            <h1 class="page-title">Projects</h1>
+            <div class="projects-container">
+                <div class="project-stack">
+                    <!-- Project Card 1 - Front -->
+                    <div class="project-card" tabindex="0" data-project="0" data-position="1">
+                        <h3 class="project-title">Expense Explorer</h3>
+                        <p class="project-description">University students struggle to track spending in their busy lives—Expense Explorer used receipt scanning to remove the friction from budgeting and help students build healthier money habits.</p>
+                        <div class="project-tags">
+                            <span class="tag">iOS</span>
+                            <span class="tag">UX</span>
+                            <span class="tag">Swift</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 - Behind -->
+                    <div class="project-card" tabindex="0" data-project="1" data-position="2">
+                        <h3 class="project-title">StepTracker</h3>
+                        <p class="project-description">Users have access to their step data but no way to make sense of it—I designed a service that transforms isolated numbers into actionable insights through comparison and saved benchmarks..</p>
+                        <div class="project-tags">
+                            <span class="tag">iOS</span>
+                            <span class="tag">Health and Fitness</span>
+                            <span class="tag">Data Visualization</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 - Further Behind -->
+                    <div class="project-card" tabindex="0" data-project="2" data-position="3">
+                        <h3 class="project-title">Security Dashboard</h3>
+                        <p class="project-description">Translating complex cybersecurity data into actionable insights through thoughtful information architecture.</p>
+                        <div class="project-tags">
+                            <span class="tag">Data Visualization</span>
+                            <span class="tag">Dashboard Design</span>
+                            <span class="tag">B2B</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="stack-hint">Hover over cards to explore projects</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Blog Modal -->
+    <div class="modal-overlay" id="blog-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">×</button>
+            <h2 class="modal-title">Thoughts & Ideas</h2>
+            <div class="blog-list">
+                <!-- Blog posts loaded dynamically from CMS -->
+                <div class="blog-loading">Loading posts...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">×</button>
+            <div class="project-modal-inner">
+                <!-- Hero Section -->
+                <header class="case-study-hero">
+                    <h1 class="project-modal-title">Project Title</h1>
+                    <p class="project-modal-subtitle"></p>
+                    <div class="project-modal-meta">
+                        <span class="meta-item"><strong>Role:</strong> <span class="meta-role"></span></span>
+                        <span class="meta-item"><strong>Timeline:</strong> <span class="meta-timeline"></span></span>
+                        <span class="meta-item"><strong>Tools:</strong> <span class="meta-tools"></span></span>
+                    </div>
+                    <div class="project-modal-tags"></div>
+                </header>
+
+                <!-- Screenshots Gallery -->
+                <div class="project-screenshots"></div>
+
+                <!-- Case Study Content (dynamically populated) -->
+                <div class="case-study-content"></div>
+
+                <!-- Simple Description (for projects without case study) -->
+                <p class="project-modal-description"></p>
+
+                <a href="#" class="project-cta" target="_blank" rel="noopener">View Project →</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Netlify Identity redirect after login -->
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>

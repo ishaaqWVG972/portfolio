@@ -1,0 +1,16 @@
+{
+  "name": "ishaaq-portfolio",
+  "version": "1.0.0",
+  "description": "Ishaaq's UX Design Portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "npx netlify dev"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
