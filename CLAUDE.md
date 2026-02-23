@@ -341,6 +341,32 @@ Full post content in Markdown here...
 - `OAUTH_GITHUB_CLIENT_ID` - GitHub OAuth app client ID
 - `OAUTH_GITHUB_CLIENT_SECRET` - GitHub OAuth app secret
 
+### Known Issues & Solutions
+
+**Problem: Vercel won't serve `.yml` files as static assets**
+- Decap CMS tries to load `config.yml` but Vercel returns 404 for `.yml` files
+- Solution: Do NOT rely on `config.yml` being served statically
+- Instead, use `CMS_MANUAL_INIT` to inline the config directly in `admin/index.html`:
+```html
+<script>window.CMS_MANUAL_INIT = true;</script>
+<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<script>
+  CMS.init({ config: { backend: { ... }, collections: [...] } });
+</script>
+```
+- `window.CMS_MANUAL_INIT = true` MUST be set before the CMS script loads, otherwise the CMS auto-initialises from `config.yml` before the manual config runs
+
+**Problem: "redirect URI is not associated with this application" on GitHub OAuth**
+- The redirect URI sent to GitHub must exactly match what is registered in the GitHub OAuth App
+- In `api/auth/index.js` the redirect URI is hardcoded to `https://ishaaq.vercel.app/api/auth/callback`
+- The GitHub OAuth App (Settings → Developer settings → OAuth Apps) must have the same URL in "Authorization callback URL"
+- If the site URL ever changes, update both the code and the GitHub OAuth App
+
+**Problem: Decap CMS config error when using `git-gateway` backend on Netlify**
+- `git-gateway` requires Netlify Identity and Git Gateway services to be enabled
+- Error "TypeError: Undefined is not an object (evaluating 'e.message.includes')" means Git Gateway is misconfigured
+- Solution: Migrated to Vercel + GitHub OAuth backend instead
+
 ## Implementation Notes
 
 ### File Structure
