@@ -7,6 +7,8 @@
   <title>Blog Admin | Ishaaq's Portfolio</title>
 </head>
 <body>
+  <!-- Must be set BEFORE the CMS script loads to prevent auto-init from config.yml -->
+  <script>window.CMS_MANUAL_INIT = true;</script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
     CMS.init({
