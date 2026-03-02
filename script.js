@@ -187,18 +187,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     conclusion: 'The project demonstrated that a research-grounded, iterative design process can produce tools that create genuine behavioural change—not just feature lists. Starting from a real user need and validating every design decision through testing made the difference.',
                     heuristics: {
                         title: 'Usability Evaluation — Nielsen\'s 10 Heuristics',
-                        insight: 'The app performs strongly across the heuristics prioritised during the design phase—visibility, consistency, and aesthetic clarity. Error handling and prevention are clearly identified as the next design priority, with specific interaction patterns planned for the following iteration.',
+                        insight: 'Scores represent heuristic violation severity (lower = fewer violations). The app performed well on interaction freedom and consistency. Visibility and contextual recognition scored moderately, while error recovery and prevention were the clearest areas for improvement—directly informing the next iteration.',
                         categories: [
                             {
                                 name: 'Strong Performance',
                                 icon: '⭐',
                                 type: 'excellent',
                                 items: [
-                                    { label: 'Visibility of System Status', score: 1, max: 8 },
-                                    { label: 'Match Between System & Real World', score: 1, max: 8 },
                                     { label: 'User Control & Freedom', score: 1, max: 8 },
-                                    { label: 'Consistency & Standards', score: 1, max: 8 },
-                                    { label: 'Aesthetic & Minimalist Design', score: 1, max: 8 }
+                                    { label: 'Flexibility & Efficiency of Use', score: 1, max: 8 },
+                                    { label: 'Consistency & Standards', score: 2, max: 8 },
+                                    { label: 'Help & Documentation', score: 2, max: 8 }
                                 ]
                             },
                             {
@@ -206,9 +205,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                 icon: '⚠️',
                                 type: 'moderate',
                                 items: [
+                                    { label: 'Match Between System & Real World', score: 3, max: 8 },
                                     { label: 'Recognition Rather than Recall', score: 3, max: 8 },
-                                    { label: 'Flexibility & Efficiency of Use', score: 3, max: 8 },
-                                    { label: 'Help & Documentation', score: 3, max: 8 }
+                                    { label: 'Visibility of System Status', score: 4, max: 8 }
                                 ]
                             },
                             {
@@ -216,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 icon: '🔴',
                                 type: 'needs-improvement',
                                 items: [
-                                    { label: 'Help Users Recognize & Recover from Errors', score: 5, max: 8 },
+                                    { label: 'Help Users Recognise & Recover from Errors', score: 5, max: 8 },
                                     { label: 'Error Prevention', score: 6, max: 8 }
                                 ]
                             }
