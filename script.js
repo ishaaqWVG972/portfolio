@@ -123,21 +123,21 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'Expense Explorer',
             subtitle: 'A research-led iOS app that transforms financial anxiety into actionable clarity for university students',
             tags: ['UX Research', 'Service Design', 'Iterative Design', 'iOS'],
-            role: 'UX Designer & Researcher',
+            role: 'Solo Developer',
             timeline: '6 months | Sep 2023 - Mar 2024',
-            tools: 'Figma, Miro, Swift, SQLite',
+            tools: 'Figma, Swift, SQLite, Trello',
             link: '#',
             screenshots: [],
             caseStudy: {
                 problem: {
-                    intro: 'A validated user need, not just a personal assumption.',
-                    story: 'Moving out for university introduced me to a problem I hadn\'t anticipated: financial anxiety. Before each bank check, there was a knot of uncertainty—spending was happening, but without visibility or control. Rather than treating this as a personal quirk, I began speaking with peers who\'d had the same experience. The response was unanimous: the anxiety was real, and the tools available weren\'t helping.',
-                    research: 'To move beyond anecdote, I conducted <strong>user interviews with university students</strong> and performed a competitive analysis of existing budgeting apps, synthesising findings through affinity mapping to identify recurring themes. The research confirmed the scale of the problem: <strong>70% of university students report financial stress</strong>, yet available solutions were built for professionals—dense with features students don\'t need, and missing the ones that would actually change behaviour.',
+                    intro: 'A validated user need, grounded in research — not just a personal assumption.',
+                    story: 'Moving out for university introduced me to a problem I hadn\'t anticipated: financial anxiety. Before each bank check, there was a knot of uncertainty—spending was happening, but without visibility or control. Rather than treating this as a personal quirk, I began speaking with peers who\'d had the same experience. Research confirmed the scale: <strong>70% of university students report financial stress</strong>, with over half seeing it impact their academic performance.',
+                    research: 'To identify what was missing in the market, I <strong>downloaded and tested six existing budgeting apps</strong>—MoneyDashboard, Emma, Monzo, Spending Tracker, Daily Budget, and Goodbudget—alongside OCR-focused tools like Klippa and Zoho Expense. I evaluated each against a <strong>synthesis table of seven key features</strong> relevant to student financial management. The analysis revealed a clear gap: no single app offered OCR receipt scanning, item-level transaction breakdowns, <em>and</em> personalised money-saving suggestions together. Existing OCR apps were built for business expense reporting, not everyday student use.',
                     gaps: [
                         'Students need to log purchases quickly and effortlessly—manual entry creates too much friction to sustain as a habit',
-                        'High-level spending summaries aren\'t enough: users need granular, item-level breakdowns to understand where money actually goes',
-                        'Identifying overspending is not sufficient without clear, actionable guidance on how to change it',
-                        'Existing apps assume financial literacy and professional contexts that most students simply don\'t have'
+                        'Category-level summaries aren\'t enough: students need item-level breakdowns to understand exactly where money goes',
+                        'Identifying overspending is not sufficient without clear, actionable guidance on where to save',
+                        'OCR and budgeting tools on the market are designed for professionals or businesses—none were tailored to the specific context of university student life'
                     ]
                 },
                 solution: {
@@ -170,21 +170,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     ]
                 },
                 process: {
-                    intro: 'A <strong>user-centred, iterative process</strong> structured around discovery, synthesis, and repeated cycles of design and testing.',
-                    description: 'I began with a discovery phase—user interviews and competitive analysis synthesised through affinity mapping to surface clear, evidence-based user needs. These needs directly shaped the information architecture and core user journeys before a single screen was designed. I then moved through progressive fidelity: low-fidelity sketches to validate structure and flows, mid-fidelity wireframes tested with real users whose structured feedback drove each iteration. Before build, I produced <strong>detailed design specifications</strong>—annotating interaction states, component behaviour, and spacing—to ensure accurate developer handoff. After release, I conducted a heuristic evaluation across Nielsen\'s 10 principles to identify remaining usability gaps and inform the next design cycle.',
+                    intro: 'An <strong>agile, iterative process</strong> using Feature Driven Development (FDD)—shipping working features in short cycles, with usability testing at every fidelity stage.',
+                    description: 'I adopted <strong>Feature Driven Development (FDD)</strong>—an agile methodology that breaks work into a prioritised feature list and builds iteratively. I used <strong>Trello</strong> to manage a ranked MVP feature list of seven core features, chosen based on my market analysis of existing apps. The design phase started in Figma with low-fidelity wireframes and an ERD diagram for the database structure, moving through mid and high fidelity with <strong>usability testing at each stage</strong>—direct observation sessions where participants completed tasks while I gathered structured feedback. Each round of testing informed the next iteration before any code was written. I then built the MVP in Swift with a client-side SQLite database, implementing features one-by-one following the FDD model. After the initial MVP release, I continued adding secondary features iteratively. The project concluded with a formal evaluation: 10 Brunel University students were recruited to test the app and complete a 15-question questionnaire covering usability and financial confidence.',
                     steps: [
-                        { step: 1, title: 'Discovery', description: 'User interviews & competitive analysis' },
-                        { step: 2, title: 'Define', description: 'Affinity mapping & user needs synthesis' },
-                        { step: 3, title: 'Low-Fidelity', description: 'IA, user flows & early validation' },
-                        { step: 4, title: 'Mid-Fidelity', description: 'Usability testing & structured iteration' },
-                        { step: 5, title: 'High-Fidelity', description: 'Visual design, specs & developer handoff' },
-                        { step: 6, title: 'Evaluate', description: 'Heuristic review & next cycle planning' }
+                        { step: 1, title: 'Market Research', description: 'Tested 6 apps, built synthesis table, identified gaps' },
+                        { step: 2, title: 'Feature Planning', description: 'Prioritised MVP feature list using Trello & FDD' },
+                        { step: 3, title: 'Low-Fidelity', description: 'Figma wireframes, ERD diagram & early user testing' },
+                        { step: 4, title: 'Mid → High Fidelity', description: 'Iterative design with usability testing at each stage' },
+                        { step: 5, title: 'Build (MVP)', description: 'Swift + SQLite, feature-by-feature development' },
+                        { step: 6, title: 'Evaluate', description: '10 participants, questionnaire & heuristic review' }
                     ]
                 },
                 results: {
-                    intro: 'Following release, I ran a structured usability testing session with university students—observing task completion, gathering qualitative feedback, and conducting a heuristic evaluation against Nielsen\'s 10 usability principles to systematically identify strengths and gaps.',
-                    feedback: 'Participants described the app as genuinely filling a gap that existing tools hadn\'t addressed. Key themes from the feedback highlighted the effortlessness of receipt scanning and the clarity of spending breakdowns as the features most likely to change financial behaviour. All participants said they would use the app as part of their daily routine—a strong signal that the design was solving the right problem in the right way.',
-                    conclusion: 'The project demonstrated that a research-grounded, iterative design process can produce tools that create genuine behavioural change—not just feature lists. Starting from a real user need and validating every design decision through testing made the difference.',
+                    intro: '10 Brunel University students were recruited via word of mouth, a Computer Science WhatsApp group, and Discord to evaluate the app. Testing was conducted through in-person sessions with direct observation, followed by a 15-question online questionnaire covering usability and financial confidence—mapped to Nielsen\'s 10 heuristics.',
+                    feedback: 'Navigation scored consistently high (7–9 out of 10), indicating the app\'s structure was intuitive and well-organised. Likelihood to become more budget-conscious scored 7–9 across all participants—a strong signal that the design was influencing real financial behaviour. OCR usefulness scored 5–8, confirming it as a valued differentiator with room to improve accuracy. The app successfully passed all feature and integration tests, confirming MVP readiness.',
+                    conclusion: 'The project demonstrated that a research-grounded, FDD-led process can deliver a functional product that creates genuine behavioural change. Starting from a real gap in the market, validating every design decision through iterative usability testing, and building feature-by-feature made the difference.',
                     heuristics: {
                         title: 'Usability Evaluation — Nielsen\'s 10 Heuristics',
                         insight: 'Scores represent heuristic violation severity (lower = fewer violations). The app performed well on interaction freedom and consistency. Visibility and contextual recognition scored moderately, while error recovery and prevention were the clearest areas for improvement—directly informing the next iteration.',
@@ -225,8 +225,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 nextTime: {
                     intro: 'Reflecting on this project through the lens of professional design practice, the next iteration would focus on four areas:',
                     improvements: [
-                        '<strong>Accessibility and inclusive design</strong> — Conduct an audit against WCAG 2.1 AA standards and review all content design with a focus on clarity and simplicity—ensuring the app is usable by students with varying levels of digital and financial literacy.',
-                        '<strong>Error prevention and recovery</strong> — The heuristic evaluation clearly identified this as the highest priority gap. The next design cycle would introduce clear recovery paths, confirmation states, and proactive error prevention patterns—particularly around the OCR scanning flow.',
+                        '<strong>Accessibility and inclusive design</strong> — Follow Apple\'s Human Interface Guidelines more closely to ensure the app is usable by students with varying levels of digital and financial literacy, reviewing content design for clarity and simplicity throughout.',
+                        '<strong>Error prevention and recovery</strong> — The heuristic evaluation clearly identified this as the highest priority gap. The next design cycle would introduce clear recovery paths, confirmation states, and proactive error prevention patterns—particularly around the OCR scanning flow where inconsistent receipt formats caused issues.',
                         '<strong>Service design expansion</strong> — Map the full student financial ecosystem beyond the app itself: bank integrations, student union services, shared household expenses, and seasonal spending patterns. The goal would be to design a holistic service rather than an isolated tool.',
                         '<strong>Content design refinement</strong> — Review all in-app microcopy with a dedicated content design lens. The language used around budgets, savings, and spending patterns should be warm, non-judgemental, and accessible to users who may have limited prior experience managing money.'
                     ]
