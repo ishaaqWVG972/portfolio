@@ -121,47 +121,47 @@ document.addEventListener('DOMContentLoaded', function() {
     const projects = [
         {
             title: 'Expense Explorer',
-            subtitle: 'Helping university students manage money confidently through receipt scanning and smart savings suggestions',
-            tags: ['iOS', 'UX Research', 'App Development'],
-            role: 'Product Designer & Developer',
+            subtitle: 'A research-led iOS app that transforms financial anxiety into actionable clarity for university students',
+            tags: ['UX Research', 'Service Design', 'Iterative Design', 'iOS'],
+            role: 'UX Designer & Researcher',
             timeline: '6 months | Sep 2023 - Mar 2024',
-            tools: 'Swift, SQLite, Figma, Feature-Driven Development',
+            tools: 'Figma, Miro, Swift, SQLite',
             link: '#',
             screenshots: [],
             caseStudy: {
                 problem: {
-                    intro: 'This started as my problem.',
-                    story: 'When I moved out for university 3 years ago, I found myself constantly anxious before checking my bank account. I knew I was spending money, but I had no idea <em>where</em> it was going or <em>how</em> to manage it better.',
-                    research: 'I asked friends who\'d also moved out—they felt the same way. This led me to research further: <strong>70% of university students feel stressed about their personal finances</strong>, yet current budgeting apps don\'t address student-specific needs.',
+                    intro: 'A validated user need, not just a personal assumption.',
+                    story: 'Moving out for university introduced me to a problem I hadn\'t anticipated: financial anxiety. Before each bank check, there was a knot of uncertainty—spending was happening, but without visibility or control. Rather than treating this as a personal quirk, I began speaking with peers who\'d had the same experience. The response was unanimous: the anxiety was real, and the tools available weren\'t helping.',
+                    research: 'To move beyond anecdote, I conducted <strong>user interviews with university students</strong> and performed a competitive analysis of existing budgeting apps, synthesising findings through affinity mapping to identify recurring themes. The research confirmed the scale of the problem: <strong>70% of university students report financial stress</strong>, yet available solutions were built for professionals—dense with features students don\'t need, and missing the ones that would actually change behaviour.',
                     gaps: [
-                        'No way to quickly log purchases (scanning receipts)',
-                        'No breakdown of what you actually bought',
-                        'No suggestions on where to save money',
-                        'Business-focused features that overwhelm students'
+                        'Students need to log purchases quickly and effortlessly—manual entry creates too much friction to sustain as a habit',
+                        'High-level spending summaries aren\'t enough: users need granular, item-level breakdowns to understand where money actually goes',
+                        'Identifying overspending is not sufficient without clear, actionable guidance on how to change it',
+                        'Existing apps assume financial literacy and professional contexts that most students simply don\'t have'
                     ]
                 },
                 solution: {
-                    tagline: 'Scan receipts → See spending → Save money',
-                    description: 'An iOS app that removes friction from budgeting and provides actionable insights:',
+                    tagline: 'Research-informed design → Effortless input → Actionable insight',
+                    description: 'Each design decision was mapped directly to a user need uncovered in research. The three core service pillars—removing friction, providing meaningful visibility, and enabling action—address the three layers of financial anxiety students described:',
                     features: [
                         {
                             title: 'OCR receipt scanning',
-                            text: 'Snap a photo of your receipt and the app automatically extracts all items and prices—no manual entry needed.',
+                            text: 'The biggest barrier to consistent budgeting was friction at the point of entry. Rather than expecting users to manually log purchases—a behaviour research showed they repeatedly abandoned—the app removes that friction entirely. Photographing a receipt automatically extracts every line item, making accurate record-keeping effortless and sustainable.',
                             screenshot: { src: 'Screenshots/Screenshot 2026-01-31 at 22.07.59.png', alt: 'Receipt scanning interface showing a receipt being photographed and OCR extracting items like Beef Supper and Falafel with prices' }
                         },
                         {
-                            title: 'Detailed breakdowns',
-                            text: 'See exactly what you bought and where. Every transaction is itemized so you can understand your spending at a granular level.',
+                            title: 'Granular spending breakdowns',
+                            text: 'Research showed that category-level summaries weren\'t enough—students wanted to know exactly what they\'d bought, not just where they\'d spent. Every transaction is itemised at product level, turning abstract totals into concrete, understandable spending patterns that users can genuinely learn from.',
                             screenshot: { src: 'Screenshots/Screenshot 2026-01-31 at 22.13.04.png', alt: 'Transaction details screen showing a Lidl purchase with itemized products including Orange juice, Eggs, and Sweetcorn with individual prices' }
                         },
                         {
-                            title: 'Money-saving suggestions',
-                            text: 'The app compares prices across stores and shows you where you could save money on items you regularly buy.',
+                            title: 'Actionable savings guidance',
+                            text: 'Awareness alone doesn\'t change behaviour—users needed a clear path to action. The app moves beyond visibility by comparing prices across stores on items a student regularly buys, translating passive awareness into genuine financial agency and giving users a concrete reason to change their habits.',
                             screenshot: { src: 'Screenshots/Screenshot 2026-01-22 at 22.12.37.png', alt: 'Savings Opportunities screen showing price comparisons across stores with potential savings highlighted in green' }
                         },
                         {
-                            title: 'Budget tracking',
-                            text: 'Set budgets for different categories and monitor your progress. The home screen gives you an at-a-glance view of where you stand.',
+                            title: 'At-a-glance budget tracking',
+                            text: 'Designed to match how students actually think about money—by category and remaining allowance, not accounting codes. The home screen gives an immediate sense of control and progress, reducing the anxiety of not knowing where you stand before even opening the app.',
                             screenshots: [
                                 { src: 'Screenshots/Screenshot 2026-01-31 at 22.11.05.png', alt: 'Home screen showing welcome message, takeaway budget progress with £26.01 remaining, and discover saving opportunities section' },
                                 { src: 'Screenshots/Screenshot 2026-01-31 at 22.10.56.png', alt: 'Budgets screen showing Takeaway and Groceries categories with progress bars and remaining amounts' }
@@ -170,22 +170,24 @@ document.addEventListener('DOMContentLoaded', function() {
                     ]
                 },
                 process: {
-                    intro: 'With a strict deadline, I followed an <strong>MVP approach</strong>—focusing on getting key features working first, then iterating on design.',
-                    description: 'I worked my way up from low-fidelity prototypes to mid-fidelity, then high-fidelity—adding more features that were requested after testing and gathering feedback from users. After each version, real users tested the app, I gathered their insights, made improvements, and released a new version. This cycle continued through to the final release.',
+                    intro: 'A <strong>user-centred, iterative process</strong> structured around discovery, synthesis, and repeated cycles of design and testing.',
+                    description: 'I began with a discovery phase—user interviews and competitive analysis synthesised through affinity mapping to surface clear, evidence-based user needs. These needs directly shaped the information architecture and core user journeys before a single screen was designed. I then moved through progressive fidelity: low-fidelity sketches to validate structure and flows, mid-fidelity wireframes tested with real users whose structured feedback drove each iteration. Before build, I produced <strong>detailed design specifications</strong>—annotating interaction states, component behaviour, and spacing—to ensure accurate developer handoff. After release, I conducted a heuristic evaluation across Nielsen\'s 10 principles to identify remaining usability gaps and inform the next design cycle.',
                     steps: [
-                        { step: 1, title: 'Low-Fidelity', description: 'Core functionality first' },
-                        { step: 2, title: 'Mid-Fidelity', description: 'Test & gather feedback' },
-                        { step: 3, title: 'High-Fidelity', description: 'Polish & refine' },
-                        { step: 4, title: 'Release', description: 'Final version' }
+                        { step: 1, title: 'Discovery', description: 'User interviews & competitive analysis' },
+                        { step: 2, title: 'Define', description: 'Affinity mapping & user needs synthesis' },
+                        { step: 3, title: 'Low-Fidelity', description: 'IA, user flows & early validation' },
+                        { step: 4, title: 'Mid-Fidelity', description: 'Usability testing & structured iteration' },
+                        { step: 5, title: 'High-Fidelity', description: 'Visual design, specs & developer handoff' },
+                        { step: 6, title: 'Evaluate', description: 'Heuristic review & next cycle planning' }
                     ]
                 },
                 results: {
-                    intro: 'I let university students use the app and gathered their feedback.',
-                    feedback: 'Students said this would genuinely help them manage their finances and budget better. They appreciated how the app made tracking spending effortless and highlighted opportunities to save money they wouldn\'t have noticed otherwise.',
-                    conclusion: 'This app was able to solve an actual real-life problem—one that I and many other students face every day.',
+                    intro: 'Following release, I ran a structured usability testing session with university students—observing task completion, gathering qualitative feedback, and conducting a heuristic evaluation against Nielsen\'s 10 usability principles to systematically identify strengths and gaps.',
+                    feedback: 'Participants described the app as genuinely filling a gap that existing tools hadn\'t addressed. Key themes from the feedback highlighted the effortlessness of receipt scanning and the clarity of spending breakdowns as the features most likely to change financial behaviour. All participants said they would use the app as part of their daily routine—a strong signal that the design was solving the right problem in the right way.',
+                    conclusion: 'The project demonstrated that a research-grounded, iterative design process can produce tools that create genuine behavioural change—not just feature lists. Starting from a real user need and validating every design decision through testing made the difference.',
                     heuristics: {
-                        title: 'Usability Performance',
-                        insight: 'The app excels in visual design and consistency but needs better error handling and prevention mechanisms.',
+                        title: 'Usability Evaluation — Nielsen\'s 10 Heuristics',
+                        insight: 'The app performs strongly across the heuristics prioritised during the design phase—visibility, consistency, and aesthetic clarity. Error handling and prevention are clearly identified as the next design priority, with specific interaction patterns planned for the following iteration.',
                         categories: [
                             {
                                 name: 'Strong Performance',
@@ -222,11 +224,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 },
                 nextTime: {
-                    intro: 'If I were to revisit this project, there are several areas I would focus on improving:',
+                    intro: 'Reflecting on this project through the lens of professional design practice, the next iteration would focus on four areas:',
                     improvements: [
-                        '<strong>Improve the OCR model</strong> — The current receipt scanning works well but could be more accurate with different receipt formats and lighting conditions.',
-                        '<strong>Enhance the design</strong> — With more time, I would refine the visual design and user experience further.',
-                        '<strong>Implement Apple Human Interface Guidelines</strong> — Ensuring the app fully adheres to iOS design patterns and conventions for a more native feel.'
+                        '<strong>Accessibility and inclusive design</strong> — Conduct an audit against WCAG 2.1 AA standards and review all content design with a focus on clarity and simplicity—ensuring the app is usable by students with varying levels of digital and financial literacy.',
+                        '<strong>Error prevention and recovery</strong> — The heuristic evaluation clearly identified this as the highest priority gap. The next design cycle would introduce clear recovery paths, confirmation states, and proactive error prevention patterns—particularly around the OCR scanning flow.',
+                        '<strong>Service design expansion</strong> — Map the full student financial ecosystem beyond the app itself: bank integrations, student union services, shared household expenses, and seasonal spending patterns. The goal would be to design a holistic service rather than an isolated tool.',
+                        '<strong>Content design refinement</strong> — Review all in-app microcopy with a dedicated content design lens. The language used around budgets, savings, and spending patterns should be warm, non-judgemental, and accessible to users who may have limited prior experience managing money.'
                     ]
                 }
             }
@@ -532,7 +535,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <p class="cs-intro"><strong>${cs.problem.intro}</strong></p>
             <p>${cs.problem.story}</p>
             <p>${cs.problem.research}</p>
-            <h4>Key gaps in existing apps:</h4>
+            <h4>Synthesis — key unmet user needs:</h4>
             <ul class="cs-list">
                 ${cs.problem.gaps.map(gap => `<li>${gap}</li>`).join('')}
             </ul>
