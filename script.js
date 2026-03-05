@@ -196,6 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 items: [
                                     { label: 'User Control & Freedom', score: 1, max: 8 },
                                     { label: 'Consistency & Standards', score: 2, max: 8 },
+                                    { label: 'Help & Documentation', score: 2, max: 8 },
                                     { label: 'Flexibility & Efficiency of Use', score: 1, max: 8 }
                                 ]
                             },
@@ -205,6 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 type: 'moderate',
                                 items: [
                                     { label: 'Visibility of System Status', score: 4, max: 8 },
+                                    { label: 'Match Between System & Real World', score: 3, max: 8 },
                                     { label: 'Recognition Rather than Recall', score: 3, max: 8 }
                                 ]
                             },
@@ -221,9 +223,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 },
                 nextTime: {
-                    intro: 'If extended in a consultancy environment, the next phase would focus on four areas:',
+                    intro: 'If I continue on with this project, the next phase would focus on four areas:',
                     improvements: [
-                        '<strong>Accessibility & Inclusive Design</strong> — Strengthening compliance with WCAG 2.1 AA and aligning with platform Human Interface standards to support users with varying digital literacy.',
+                        '<strong>Accessibility & Inclusive Design</strong> — Strengthening compliance with WCAG 2.1 AA and aligning with platform Apple Human Interface guidelines to support users with varying digital literacy.',
                         '<strong>Error Prevention & Recovery</strong> — Introducing clearer system feedback, confirmation patterns, and guided correction flows — particularly within OCR workflows where inconsistent receipt formats caused issues.',
                         '<strong>Service Design Expansion</strong> — Mapping the broader financial ecosystem — bank integrations, shared accommodation expenses, student services — to design a holistic service blueprint rather than a standalone app.',
                         '<strong>Content Design Refinement</strong> — Ensuring tone is supportive, non-judgemental, and accessible to users with limited financial literacy.'
