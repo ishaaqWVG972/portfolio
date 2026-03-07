@@ -645,18 +645,20 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </section>`;
 
-        // Process Section - MVP Approach
+        // Process Section - Vertical Cards
         html += `
         <section class="cs-section cs-process" id="cs-process">
             <h2 class="cs-section-title">Process</h2>
             <p class="cs-process-intro">${cs.process.intro}</p>
             <p>${cs.process.description}</p>
-            <div class="cs-timeline">
+            <div class="cs-steps">
                 ${cs.process.steps.map(p => `
-                    <div class="timeline-item">
-                        <div class="timeline-dot">${p.step}</div>
-                        <div class="timeline-label">${p.title}</div>
-                        <div class="timeline-description">${p.description}</div>
+                    <div class="step-card">
+                        <div class="step-number">${p.step}</div>
+                        <div class="step-content">
+                            <div class="step-title">${p.title}</div>
+                            <div class="step-description">${p.description}</div>
+                        </div>
                     </div>
                 `).join('')}
             </div>

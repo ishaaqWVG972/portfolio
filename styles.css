@@ -1057,65 +1057,67 @@ body {
     max-width: 180px;
 }
 
-/* Process Timeline */
+/* Process Steps */
 .cs-process-intro {
     font-size: 17px;
     color: var(--text-primary);
     margin-bottom: 16px;
 }
 
-.cs-timeline {
+.cs-steps {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
     margin: 40px 0;
-    position: relative;
 }
 
-.cs-timeline::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 40px;
-    right: 40px;
-    height: 2px;
-    background: var(--border-light);
-    z-index: 0;
+.step-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 28px 30px;
+    border-bottom: 1px solid rgba(119, 187, 68, 0.12);
+    transition: background 0.3s ease;
 }
 
-.timeline-item {
-    text-align: center;
-    flex: 1;
-    position: relative;
-    z-index: 1;
+.step-card:last-child {
+    border-bottom: none;
 }
 
-.timeline-dot {
-    width: 40px;
-    height: 40px;
+.step-card:hover {
+    background: rgba(119, 187, 68, 0.04);
+}
+
+.step-number {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
     background: var(--xbox-green);
     border-radius: 50%;
-    margin: 0 auto 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 2px;
 }
 
-.timeline-label {
-    font-size: 14px;
+.step-content {
+    flex: 1;
+}
+
+.step-title {
+    font-size: 17px;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
-.timeline-description {
-    font-size: 12px;
+.step-description {
+    font-size: 14px;
     color: var(--text-muted);
-    max-width: 120px;
-    margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* Results Section */
@@ -1625,32 +1627,25 @@ body {
         font-size: 20px;
     }
 
-    /* Timeline mobile */
-    .cs-timeline {
-        flex-direction: column;
-        gap: 24px;
-        align-items: flex-start;
-    }
-
-    .cs-timeline::before {
-        display: none;
-    }
-
-    .timeline-item {
-        display: flex;
-        align-items: center;
+    /* Process steps mobile */
+    .step-card {
+        padding: 20px 16px;
         gap: 16px;
-        text-align: left;
     }
 
-    .timeline-dot {
-        margin: 0;
-        flex-shrink: 0;
+    .step-number {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        font-size: 13px;
     }
 
-    .timeline-description {
-        max-width: none;
-        margin: 0;
+    .step-title {
+        font-size: 15px;
+    }
+
+    .step-description {
+        font-size: 13px;
     }
 
     /* Results mobile */
