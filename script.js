@@ -235,15 +235,75 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             title: 'StepTracker',
-            subtitle: 'Transforming step data into actionable insights through comparison and saved benchmarks',
-            tags: ['iOS', 'Data Visualization', 'Health and Fitness'],
-            role: 'Product Designer',
-            timeline: '3 months',
-            tools: 'Figma, Swift',
-            description: 'Users have access to their step data but no way to make sense of it—I designed a service that transforms isolated numbers into actionable insights through comparison and saved benchmarks.',
+            subtitle: 'Redesigning personal activity data into meaningful, shareable experiences through contextual insight and user-centred design',
+            tags: ['UX Research', 'Service Design', 'Iterative Design', 'iOS'],
+            role: 'Solo Designer & Developer',
+            timeline: 'Personal Project · 2024',
+            tools: 'Figma, Swift, HealthKit',
             link: '#',
             screenshots: [],
-            caseStudy: null
+            caseStudy: {
+                problem: {
+                    intro: 'Framing a validated user problem',
+                    story: 'The idea came from a frustration I noticed repeatedly in everyday life. Whenever I went on holiday or a day out, I wanted to look back at how active I had been — compare a beach walk to a city trip, or see whether I moved more during one week away than another. But there was no way to do this in the moment. I would have to note down the figures manually, save them somewhere else, and do the comparison myself.',
+                    research: 'The same friction appeared in social contexts. When talking with friends and family after a holiday or a day out — "how many steps did you do?", "let\'s compare" — nobody could actually answer without having pre-emptively noted their numbers down. For what feels like a basic and natural user need, no app seemed to support it. To validate whether this was a wider problem, I audited the existing landscape directly. I downloaded and tested four apps: <strong>StepApps</strong>, <strong>Steps</strong>, <strong>Pacer</strong>, and the native <strong>iOS Health app</strong>. Combined, the three third-party apps held over 100,000 App Store ratings — a significant user base to draw insight from.',
+                    gapsHeading: 'Competitive Analysis — Key Findings:',
+                    gaps: [
+                        '<strong>Data without context.</strong> All four apps display step counts, but none translate raw numbers into meaningful personal narrative. Users can see that they walked 8,000 steps on a Tuesday, but not what that means relative to a holiday, a recovery period, or a goal they set for themselves.',
+                        '<strong>Custom period comparison is absent.</strong> The iOS Health app allows users to scroll back through months — but any contextual annotation, any labelling of "this was the week I went to Barcelona", has to happen elsewhere entirely.',
+                        '<strong>Paywalls on basic functionality.</strong> All three third-party apps operate on a free/paid split, with comparison and historical insight features locked behind subscription tiers. For users who simply want to understand how much they have walked, this creates unnecessary friction.',
+                        '<strong>Information overload through feature creep.</strong> The third-party apps conflate step tracking with full fitness and workout logging, resulting in cluttered home screens where the primary metric — steps — competes with exercises, calories, sleep, and more.'
+                    ]
+                },
+                solution: {
+                    tagline: 'A focused activity service structured around three design pillars',
+                    description: 'The service needed to support custom period creation, enable meaningful comparison across time, provide social sharing capability, and surface insight at a glance — without replicating the feature overload found in existing apps.',
+                    features: [
+                        {
+                            title: 'Creating Meaningful Periods — Custom Date Ranges',
+                            text: '<em>Insight: Users think in experiences, not calendar months.</em> Rather than locking data to fixed daily/weekly/monthly views, the app allows users to define and name custom periods — a holiday, a recovery phase, a challenge week. These periods surface on the home view as named, retrievable snapshots. Logging time reduced significantly during usability testing, increasing likelihood of sustained use.'
+                        },
+                        {
+                            title: 'Enabling Comparison — Visual Trend Analysis',
+                            text: '<em>Insight: Numbers only become useful when placed alongside other numbers.</em> The app generates visual comparisons across saved periods — bar charts, step averages, and peak days. Users can compare their activity during a holiday against the weeks before and after, or contrast two separate trips. This transforms passive tracking into active reflection.'
+                        },
+                        {
+                            title: 'Enabling Social Context — Shared Step Comparison',
+                            text: '<em>Insight: Activity is often relational — people want to compare with people they know.</em> The app allows users to share a custom period summary with friends and family, enabling the kind of casual comparison that happens naturally in conversation ("how many steps did you do on holiday?") without requiring manual note-taking or screenshots. This extends the service beyond individual insight into shared experience.'
+                        },
+                        {
+                            title: 'At-a-Glance Dashboard',
+                            text: 'The home screen was designed around a single priority: today\'s steps, contextualised against your recent history and active periods. No workouts, no calorie rings, no feature overload. The mental model is simple — "how does today compare to what I normally do, and to the periods I care about?"'
+                        }
+                    ]
+                },
+                process: {
+                    intro: 'Research-Led, Requirements-Driven Design',
+                    description: 'Following a structured design process, I moved from problem identification through competitive analysis, requirements definition, wireframing, and iterative prototyping. The wireframe phase translated home view requirements into a concrete layout: time-of-day greeting, daily step bar chart with previous days greyed out for context, recent periods surfaced as named cards, and a daily goal progress tracker.',
+                    steps: [
+                        { step: 1, title: 'Problem Identification', description: 'Personal frustration and social friction identified as design opportunity; hypothesis formed around contextual comparison as an unmet need' },
+                        { step: 2, title: 'Competitive Analysis', description: 'Four apps audited across step visibility, comparison features, paywalls, information architecture, and context-setting capability' },
+                        { step: 3, title: 'Requirements Definition', description: 'Four minimum requirements established: custom date range input, period comparison, visual trend display, and contextual event-based insights' },
+                        { step: 4, title: 'Wireframing', description: 'Low-fidelity layouts produced for home view and comparison view; requirements mapped to UI components' },
+                        { step: 5, title: 'Prototyping', description: 'High-fidelity designs iterated in Figma, with HealthKit integration mapped as technical dependency' },
+                        { step: 6, title: 'Evaluation', description: 'Design assessed against identified user needs and competitive gaps' }
+                    ]
+                },
+                results: {
+                    intro: 'The competitive analysis confirmed a genuine and underserved user need. All four apps — despite a combined 100,000+ App Store ratings — failed to support contextual comparison or user-defined time periods without manual workaround. The wireframes and requirements demonstrate a clear path from identified insight to design response.',
+                    feedback: 'The project surfaces an important design principle: tracking data is not the same as understanding it. Moving from passive data display to contextual, comparative insight requires designing for the way people actually think about their activity — in terms of experiences and periods, not calendar units.',
+                    conclusion: 'Starting from a personal frustration, validating the gap through competitive analysis, and translating insights into a focused design response demonstrates how user-centred thinking can uncover opportunity in a crowded market.'
+                },
+                nextTime: {
+                    intro: 'If continued, the next iteration would focus on four areas:',
+                    improvements: [
+                        '<strong>HealthKit Integration</strong> — Live step data pulled directly from HealthKit to populate custom periods without manual input.',
+                        '<strong>Social Comparison Feature</strong> — Developing the friend/family sharing model, including privacy controls and comparison presentation.',
+                        '<strong>Notification Design</strong> — Contextual prompts that surface period summaries at natural moments (end of a trip, after a week of a new goal).',
+                        '<strong>Accessibility & Inclusive Design</strong> — Ensuring visual trends and comparison data remain accessible to users with varying visual abilities, aligned with WCAG 2.1 AA and Apple Human Interface Guidelines.'
+                    ]
+                }
+            }
         },
         {
             title: 'Security Dashboard',
@@ -534,7 +594,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <p class="cs-intro"><strong>${cs.problem.intro}</strong></p>
             <p>${cs.problem.story}</p>
             <p>${cs.problem.research}</p>
-            <h4>Synthesis — key unmet user needs:</h4>
+            <h4>${cs.problem.gapsHeading || 'Synthesis — key unmet user needs:'}</h4>
             <ul class="cs-list">
                 ${cs.problem.gaps.map(gap => `<li>${gap}</li>`).join('')}
             </ul>
