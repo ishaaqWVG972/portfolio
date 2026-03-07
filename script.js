@@ -261,19 +261,26 @@ document.addEventListener('DOMContentLoaded', function() {
                     features: [
                         {
                             title: 'Creating Meaningful Periods — Custom Date Ranges',
-                            text: '<em>Insight: Users think in experiences, not calendar months.</em> Rather than locking data to fixed daily/weekly/monthly views, the app allows users to define and name custom periods — a holiday, a recovery phase, a challenge week. These periods surface on the home view as named, retrievable snapshots. Logging time reduced significantly during usability testing, increasing likelihood of sustained use.'
+                            text: '<em>Insight: Users think in experiences, not calendar months.</em> Rather than locking data to fixed daily/weekly/monthly views, the app allows users to define and name custom periods — a holiday, a recovery phase, a challenge week. These periods surface on the home view as named, retrievable snapshots. Logging time reduced significantly during usability testing, increasing likelihood of sustained use.',
+                            screenshot: { src: 'Screenshots/Screenshot 2026-03-06 at 15.57.36.png', alt: 'New Period creation screen showing icon selection, period name input for Weekend Hike at Snowdon, and date range picker with start and end dates' }
                         },
                         {
                             title: 'Enabling Comparison — Visual Trend Analysis',
-                            text: '<em>Insight: Numbers only become useful when placed alongside other numbers.</em> The app generates visual comparisons across saved periods — bar charts, step averages, and peak days. Users can compare their activity during a holiday against the weeks before and after, or contrast two separate trips. This transforms passive tracking into active reflection.'
+                            text: '<em>Insight: Numbers only become useful when placed alongside other numbers.</em> The app generates visual comparisons across saved periods — bar charts, step averages, and peak days. Users can compare their activity during a holiday against the weeks before and after, or contrast two separate trips. This transforms passive tracking into active reflection.',
+                            screenshot: { src: 'Screenshots/Screenshot 2026-03-06 at 15.56.33.png', alt: 'Compare view showing Barcelona Trip versus Recovery Week with daily average, total steps, and peak day bar chart comparisons' }
                         },
                         {
                             title: 'Enabling Social Context — Shared Step Comparison',
-                            text: '<em>Insight: Activity is often relational — people want to compare with people they know.</em> The app allows users to share a custom period summary with friends and family, enabling the kind of casual comparison that happens naturally in conversation ("how many steps did you do on holiday?") without requiring manual note-taking or screenshots. This extends the service beyond individual insight into shared experience.'
+                            text: '<em>Insight: Activity is often relational — people want to compare with people they know.</em> The app allows users to share a custom period summary with friends and family, enabling the kind of casual comparison that happens naturally in conversation ("how many steps did you do on holiday?") without requiring manual note-taking or screenshots. This extends the service beyond individual insight into shared experience.',
+                            screenshot: { src: 'Screenshots/Screenshot 2026-03-06 at 15.56.42.png', alt: 'Social sharing screen showing Share a Period with selectable periods like Barcelona Trip and Recovery Week with share icons' }
                         },
                         {
                             title: 'At-a-Glance Dashboard',
-                            text: 'The home screen was designed around a single priority: today\'s steps, contextualised against your recent history and active periods. No workouts, no calorie rings, no feature overload. The mental model is simple — "how does today compare to what I normally do, and to the periods I care about?"'
+                            text: 'The home screen was designed around a single priority: today\'s steps, contextualised against your recent history and active periods. No workouts, no calorie rings, no feature overload. The mental model is simple — "how does today compare to what I normally do, and to the periods I care about?"',
+                            screenshots: [
+                                { src: 'Screenshots/Screenshot 2026-03-07 at 19.41.59.png', alt: 'Home dashboard showing today\'s 4,280 steps with 43% goal progress, weekly bar chart, and recent periods including Barcelona Trip and Recovery Week' },
+                                { src: 'Screenshots/Screenshot 2026-03-07 at 19.42.10.png', alt: 'Barcelona Trip detail view showing 98,420 total steps, 12,303 daily average, 18,920 peak day, and daily breakdown bar chart across 8 days' }
+                            ]
                         }
                     ]
                 },
