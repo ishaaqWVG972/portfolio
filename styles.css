@@ -307,6 +307,9 @@ body {
     color: var(--text-on-dark);
     border: none;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
 }
 
 .tile-blog:hover {
@@ -317,6 +320,56 @@ body {
 .tile-blog .tile-description,
 .tile-blog .tile-hint {
     color: var(--text-on-dark);
+}
+
+/* Blog tile post list */
+.blog-tile-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.blog-tile-post {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    padding: 14px 18px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    width: 100%;
+}
+
+.blog-tile-post:hover {
+    background: rgba(0, 0, 0, 0.35);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateX(6px);
+}
+
+.blog-tile-post-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+.blog-tile-post-date {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+}
+
+.blog-tile-loading,
+.blog-tile-empty {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 10px 0;
 }
 
 /* About Tile - Teal */

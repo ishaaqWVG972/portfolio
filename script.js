@@ -387,6 +387,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Render blog post titles directly inside the dashboard tile
+    function renderBlogTilePosts() {
+        const container = document.getElementById('blog-tile-posts');
+        if (!container) return;
+
+        if (blogPosts.length === 0) {
+            container.innerHTML = '<p class="blog-tile-empty">No posts yet — check back soon.</p>';
+            return;
+        }
+
+        container.innerHTML = blogPosts.map((post, index) => `
+            <button class="blog-tile-post" data-index="${index}" aria-label="Read: ${post.title}">
+                <span class="blog-tile-post-title">${post.title}</span>
+                <span class="blog-tile-post-date">${formatBlogDate(post.date)}</span>
+            </button>
+        `).join('');
+
+        container.querySelectorAll('.blog-tile-post').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const index = parseInt(btn.dataset.index, 10);
+                openBlogModalAtPost(index);
+            });
+        });
+    }
+
     // ===== BLOG MODAL =====
     async function openBlogModal() {
         lastFocusedElement = document.activeElement;
@@ -406,6 +432,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     }
 
+    async function openBlogModalAtPost(index) {
+        lastFocusedElement = document.activeElement;
+        blogModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+
+        if (blogPosts.length === 0) {
+            await loadBlogPosts();
+        }
+
+        showFullPost(index);
+
+        setTimeout(() => {
+            blogModalClose.focus();
+        }, 100);
+    }
+
     function closeBlogModal() {
         blogModal.classList.remove('active');
         document.body.style.overflow = '';
@@ -415,7 +457,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    blogTile.addEventListener('click', openBlogModal);
+    // Tile itself no longer needs a click handler — individual post buttons handle it
     blogTile.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
@@ -894,4 +936,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial animation
     animateTiles();
+
+    // Pre-load blog posts and populate the dashboard tile
+    loadBlogPosts().then(() => {
+        renderBlogTilePosts();
+    });
 });
